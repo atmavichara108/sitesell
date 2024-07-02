@@ -3,52 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лендинг грядообразователя</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Грядообразователь</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header a {
+            color: #ff9800;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 0 15px;
+        }
+        .hero {
+            background: url('your_image_url.jpg') no-repeat center center/cover;
+            height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            top: 50px;
+        }
+        .hero h1 {
+            font-size: 48px;
+        }
+        .hero p {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .hero .cta-buttons {
+            margin-top: 20px;
+        }
+        .cta-button {
+            background-color: #ff9800;
+            color: white;
+            padding: 15px 25px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .cta-button a {
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            padding: 60px 20px;
+        }
+        .product {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .product img {
+            width: 100%;
+            max-width: 400px;
+        }
+        .product h2 {
+            font-size: 32px;
+            margin: 20px 0;
+        }
+        .product p {
+            font-size: 18px;
+            color: #333;
+        }
+        .contact {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .contact a {
+            color: #ff9800;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .map {
+            height: 300px;
+            width: 100%;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff9800;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .cta-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="contact-info">
-            <p>Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
-        </div>
+        <a href="tel:+1234567890">+1234567890</a>
     </header>
-
-    <section id="offer" class="section">
-        <div class="container">
-            <h1>Мы - лучшие, мы - номер один</h1>
-            <p>Краткое описание предложения и призыв к действию.</p>
-            <a href="#top"><img src="arrow.png" alt="Наверх" class="scroll-top"></a>
+    <section class="hero">
+        <div>
+            <h1>Грядообразователь</h1>
+            <p>Мы - лучшие, мы - номер один</p>
+            <div class="cta-buttons">
+                <button class="cta-button"><a href="tel:+1234567890">Заказать звонок</a></button>
+                <button class="cta-button"><a href="https://wa.me/1234567890">Связаться в WhatsApp</a></button>
+            </div>
         </div>
     </section>
-
-    <section id="photos" class="section">
-        <div class="container">
-            <h2>Фотографии продукции и цены</h2>
-            <p>Здесь размещены фотографии с указанием цен.</p>
-            <a href="#top"><img src="arrow.png" alt="Наверх" class="scroll-top"></a>
+    <section class="content">
+        <div class="product">
+            <img src="product_image_url.jpg" alt="Грядообразователь">
+            <h2>Грядообразователь</h2>
+            <p>Описание грядообразователя. Цена: 50000 руб.</p>
+        </div>
+        <div class="product">
+            <img src="product_image_url.jpg" alt="Грядообразователь">
+            <h2>Грядообразователь</h2>
+            <p>Описание грядообразователя. Цена: 50000 руб.</p>
         </div>
     </section>
-
-    <section id="description" class="section">
-        <div class="container">
-            <h2>Описание продукции</h2>
-            <p>Подробное описание вашего грядообразователя.</p>
-            <a href="#top"><img src="arrow.png" alt="Наверх" class="scroll-top"></a>
-        </div>
+    <section class="contact">
+        <h2>Контакты</h2>
+        <p>Адрес: ул. Примерная, 1, г. Пример</p>
+        <a href="mailto:example@example.com">example@example.com</a>
+        <div class="map" id="map"></div>
     </section>
-
-    <section id="contacts" class="section">
-        <div class="container">
-            <h2>Контакты и карта</h2>
-            <p>Контактная информация и карта с местоположением офиса.</p>
-            <a href="#top"><img src="arrow.png" alt="Наверх" class="scroll-top"></a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Лендинг грядообразователя</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <button class="back-to-top">Наверх</button>
+    <script>
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.querySelector('.back-to-top').style.display = 'block';
+            } else {
+                document.querySelector('.back-to-top').style.display = 'none';
+            }
+        };
+        document.querySelector('.back-to-top').onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
