@@ -37,6 +37,17 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .hero-content h1 {
@@ -55,6 +66,24 @@ body, html {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    opacity: 0;
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content a:hover {
+    background-color: #235a8e;
+    transform: scale(1.1);
 }
 
 .product-description {
