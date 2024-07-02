@@ -4,30 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Грядообразователь</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
             overflow-x: hidden;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        header a {
-            color: #ff9800;
-            text-decoration: none;
-            font-size: 20px;
-            margin: 0 15px;
         }
         .hero {
             background: url('your_image_url.jpg') no-repeat center center/cover;
@@ -38,82 +20,25 @@
             color: white;
             text-align: center;
             position: relative;
-            top: 50px;
-            animation: fadeIn 2s ease-in-out;
         }
         .hero h1 {
             font-size: 48px;
-            animation: slideInLeft 1s ease-out;
         }
         .hero p {
             font-size: 24px;
             margin: 20px 0;
-            animation: slideInRight 1s ease-out;
         }
-        .hero .cta-buttons {
-            margin-top: 20px;
-        }
-        .cta-button {
-            background-color: #ff9800;
-            color: white;
-            padding: 15px 25px;
+        .cta-buttons .btn {
             margin: 5px;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button a {
-            color: white;
-            text-decoration: none;
-        }
-        .cta-button:hover {
-            background-color: #e68900;
-        }
-        .content {
-            padding: 60px 20px;
-        }
-        .product {
-            text-align: center;
-            margin-bottom: 40px;
         }
         .product img {
             width: 100%;
             max-width: 400px;
-            animation: fadeIn 2s ease-in-out;
-        }
-        .product h2 {
-            font-size: 32px;
-            margin: 20px 0;
-        }
-        .product p {
-            font-size: 18px;
-            color: #333;
-        }
-        .contact {
-            background-color: #333;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .contact a {
-            color: #ff9800;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        .map {
-            height: 300px;
-            width: 100%;
         }
         .back-to-top {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #ff9800;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
             display: none;
             transition: opacity 0.3s ease;
         }
@@ -124,58 +49,57 @@
             .hero p {
                 font-size: 18px;
             }
-            .cta-button {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideInLeft {
-            from { transform: translateX(-100%); }
-            to { transform: translateX(0); }
-        }
-        @keyframes slideInRight {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
         }
     </style>
 </head>
 <body>
-    <header>
-        <a href="tel:+1234567890">+1234567890</a>
+
+    <header class="bg-dark text-white text-center py-2">
+        <a href="tel:+1234567890" class="text-warning h4">+1234567890</a>
     </header>
+
     <section class="hero">
         <div>
             <h1>Грядообразователь</h1>
             <p>Мы - лучшие, мы - номер один</p>
             <div class="cta-buttons">
-                <button class="cta-button"><a href="tel:+1234567890">Заказать звонок</a></button>
-                <button class="cta-button"><a href="https://wa.me/1234567890">Связаться в WhatsApp</a></button>
+                <a href="tel:+1234567890" class="btn btn-warning">Заказать звонок</a>
+                <a href="https://wa.me/1234567890" class="btn btn-warning">Связаться в WhatsApp</a>
             </div>
         </div>
     </section>
-    <section class="content">
-        <div class="product">
-            <img src="product_image_url.jpg" alt="Грядообразователь">
-            <h2>Грядообразователь</h2>
-            <p>Описание грядообразователя. Цена: 50000 руб.</p>
-        </div>
-        <div class="product">
-            <img src="product_image_url.jpg" alt="Грядообразователь">
-            <h2>Грядообразователь</h2>
-            <p>Описание грядообразователя. Цена: 50000 руб.</p>
+
+    <section class="content py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 product text-center mb-4">
+                    <img src="product_image_url.jpg" alt="Грядообразователь">
+                    <h2 class="mt-3">Грядообразователь</h2>
+                    <p>Описание грядообразователя. Цена: 50000 руб.</p>
+                </div>
+                <div class="col-md-6 product text-center mb-4">
+                    <img src="product_image_url.jpg" alt="Грядообразователь">
+                    <h2 class="mt-3">Грядообразователь</h2>
+                    <p>Описание грядообразователя. Цена: 50000 руб.</p>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="contact">
-        <h2>Контакты</h2>
-        <p>Адрес: ул. Примерная, 1, г. Пример</p>
-        <a href="mailto:example@example.com">example@example.com</a>
-        <div class="map" id="map"></div>
+
+    <section class="contact bg-dark text-white py-5">
+        <div class="container text-center">
+            <h2>Контакты</h2>
+            <p>Адрес: ул. Примерная, 1, г. Пример</p>
+            <a href="mailto:example@example.com" class="text-warning">example@example.com</a>
+            <div class="map mt-4" id="map"></div>
+        </div>
     </section>
-    <button class="back-to-top">Наверх</button>
+
+    <button class="back-to-top btn btn-warning">Наверх</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         window.onscroll = function() {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
